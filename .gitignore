@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+
+# Node
+node_modules/
