@@ -24,9 +24,24 @@
         placeholder: '搜索',
         noData: '没有结果',
       },
+      plugins: [
+        function(hook) {
+          hook.doneEach(function() {
+            var counter = document.getElementById('busuanzi-counter');
+            if (!counter) {
+              counter = document.createElement('div');
+              counter.id = 'busuanzi-counter';
+              counter.style.cssText = 'text-align:right;font-size:0.85em;color:#999;margin-top:2em;padding-top:1em;border-top:1px solid #eee;';
+              document.querySelector('article') && document.querySelector('article').appendChild(counter);
+            }
+            counter.innerHTML = '本文阅读量 <span id="busuanzi_value_page_pv">...</span> 次';
+          });
+        }
+      ],
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
