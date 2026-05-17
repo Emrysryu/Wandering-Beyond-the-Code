@@ -1,0 +1,46 @@
+# ===== 敏感 / 私人 =====
+deepseek_key.txt
+*.key
+.env
+
+# ===== 教学资料（默认全排除，有版权风险）=====
+**/原始资料/
+*.docx
+*.pdf
+*.xlsx
+# 默认所有 txt 都排除（多数源不明、可能有版权）
+**/*.txt
+# 例外：提示词模板必须保留（这些是项目代码）
+!**/prompt_layer*.txt
+# 如果你确认某个 txt 是你自己整理或公共领域、想上传，git add -f 强制加
+# 例：git add -f 成语/我自己整理的成语表.txt
+
+# ===== AI 提取/生成的题库（建议本地保留，不上传）=====
+**/题库.json
+**/题库.js
+**/chengyu_db.json
+**/chengyu_db.js
+**/chengyu_600.json
+**/字音库.json
+**/字形库.json
+**/字形库_待定.json
+**/病句库.json
+**/病句库_全.json
+**/病句语段库.json
+**/标点库.json
+**/词语库.json
+**/对联库.json
+**/仿写补写库.json
+**/_extracted.txt
+
+# ===== 运行日志 =====
+**/extract.log
+**/gen*.log
+
+# ===== 系统垃圾 =====
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.vscode/
+.idea/
