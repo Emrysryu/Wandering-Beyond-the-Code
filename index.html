@@ -2,12 +2,21 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Wandering Beyond the Code</title>
+  <title>Wandering Beyond the Code · 语文教学材料库</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root {
-      --theme-color: #4a7fa5;
+      --theme-color: #3f6f8f;
+    }
+    .markdown-section {
+      max-width: 920px;
+    }
+    .app-name-link img {
+      max-width: 56px;
+    }
+    .sidebar-nav strong {
+      color: #2f5068;
     }
   </style>
 </head>
@@ -18,11 +27,14 @@
       name: 'Wandering Beyond the Code',
       repo: 'https://github.com/Emrysryu/Wandering-Beyond-the-Code',
       loadSidebar: true,
-      subMaxLevel: 2,
+      subMaxLevel: 3,
       auto2top: true,
+      homepage: 'README.md',
+      mergeNavbar: true,
       search: {
-        placeholder: '搜索',
+        placeholder: '搜索讲义、真题、方法',
         noData: '没有结果',
+        depth: 3,
       },
       plugins: [
         function(hook) {
