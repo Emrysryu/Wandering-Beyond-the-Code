@@ -78,6 +78,14 @@
       mergeNavbar: true,
       markdown: {
         breaks: true,
+        renderer: {
+          br: function() {
+            return '<br data-markdown-break>';
+          },
+          paragraph: function(text) {
+            return '<p>' + text.replace(/(<br\s*\/?>)[ \t]*<br data-markdown-break>/gi, '$1') + '</p>\n';
+          },
+        },
       },
       search: {
         placeholder: '搜索讲义、真题、训练、文章',
